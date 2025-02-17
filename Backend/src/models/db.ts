@@ -5,6 +5,7 @@ interface IUser extends Document {
     lastName: string;
     email: string;
     password: string;
+    brain: IBrain["id"]
 }
 
 const UserSchema: Schema = new Schema<IUser> (
@@ -13,6 +14,7 @@ const UserSchema: Schema = new Schema<IUser> (
         lastName: {type: String, required: true},
         email: {type: String, required: true, unique:true},
         password: {type: String, required: true},
+        brain: {type: Schema.Types.ObjectId, ref: "Brain"}
     }
 )
 const User = model<IUser>("User", UserSchema)

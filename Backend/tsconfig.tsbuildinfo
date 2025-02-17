@@ -1,1 +1,1 @@
-{"root":["./src/config.ts","./src/index.ts","./src/controllers/signinhandler.ts","./src/controllers/signuphandler.ts","./src/models/db.ts"],"version":"5.7.3"}
+{"root":["./src/config.ts","./src/index.ts","./src/controllers/getbrainhandler.ts","./src/controllers/postbrainhandler.ts","./src/controllers/signinhandler.ts","./src/controllers/signuphandler.ts","./src/middlewares/authmiddleware.ts","./src/models/db.ts","./src/types/override.ts"],"version":"5.7.3"}
