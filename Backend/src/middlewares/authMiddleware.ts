@@ -30,6 +30,8 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
     }
     req.email = decoded.email ;
     req.userId = decoded.id;
+    req.firstName = user.firstName;
+    req.lastName = user.lastName;
     next()
     }catch (e){
         console.error(e)

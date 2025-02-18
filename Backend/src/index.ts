@@ -11,7 +11,8 @@ import { signinHandler } from './controllers/signinHandler'
 import { postBrainHandler } from './controllers/postBrainHandler';
 import { authMiddleware } from './middlewares/authMiddleware';
 import { getBrainHandler } from './controllers/getBrainHandler';
-
+import { getUserDetailsHandler } from './controllers/getUserDetailsHandler';
+import './types/override'
 
 
 const app = express();
@@ -30,5 +31,6 @@ app.post("/signup", signupHandler)
 app.post("/signin", signinHandler)
 app.post("/createBrain", authMiddleware, postBrainHandler)
 app.get("/getBrain", authMiddleware, getBrainHandler)
+app.get("/userDetails", authMiddleware, getUserDetailsHandler)
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
