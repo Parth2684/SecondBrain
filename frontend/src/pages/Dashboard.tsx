@@ -28,7 +28,7 @@ const fetchMetaData = async (url: string): Promise<LinkPreviewData | null> => {
             return {
                 title: data.data.title || "No Title",
                 description: data.data.description || "No Description",
-                image: data.data.image.url || "", // Ensure `image.url` exists
+                image: data.data.image.url || "", 
                 url: data.data.url || url
             };
         }
@@ -79,11 +79,11 @@ export const Dashboard = () => {
             <Topbar isSigned={true} />
         <div className="h-screen overflow-y-auto border p-4">
             <AddBrain />
-            <div className="grid grid-cols-3">
+            <div className="columns-3 gap-4">
                 {brain.map((item, index) => {
                     const urls = extractUrls(item.description);
                     return (
-                        <div key={index} className="border bg-white opacity-90 m-2 rounded-md p-4">
+                        <div key={index} className="border bg-white opacity-90 m-2 rounded-md p-4 break-inside-avoid">
                             <div className="h-full">
                             <div className="text-indigo-950 text-xl font-semibold">
                                 Title: {item.title}
