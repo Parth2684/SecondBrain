@@ -13,6 +13,7 @@ import { authMiddleware } from './middlewares/authMiddleware';
 import { getBrainHandler } from './controllers/getBrainHandler';
 import { getUserDetailsHandler } from './controllers/getUserDetailsHandler';
 import './types/override'
+import { putBrainHandler } from './controllers/putBrainHandler';
 
 
 const app = express();
@@ -32,5 +33,6 @@ app.post("/signin", signinHandler)
 app.post("/createBrain", authMiddleware, postBrainHandler)
 app.get("/getBrain", authMiddleware, getBrainHandler)
 app.get("/userDetails", authMiddleware, getUserDetailsHandler)
+app.put("/editBrain", authMiddleware, putBrainHandler)
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
