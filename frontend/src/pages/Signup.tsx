@@ -4,6 +4,7 @@ import { Button } from "../components/Button"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { Heading } from "../components/Heading"
+import { Topbar } from "../components/Topbar"
 
 
 export const Signup = () => {
@@ -39,8 +40,10 @@ export const Signup = () => {
         
     }
 
-    return <div className="max-w-screen flex justify-center">
-        <div className="flex flex-col h-screen justify-center w-[35%]">
+    return<div>
+        <Topbar isSigned={false} />
+            <div className="max-w-screen flex justify-center min-h-screen">
+        <div className="flex flex-col h-screen w-[35%]">
             <Heading title="Signup" />
             <InputBox type="text" placeholder="Enter your first name here" label="First Name" onChange={(e => setFirstName(e.target.value))} />
             <InputBox type="text" placeholder="Enter your last name here" label="Last Name" onChange={(e => setLastName(e.target.value))} />
@@ -55,4 +58,6 @@ export const Signup = () => {
         </div>
         
     </div>
+    </div> 
+    
 }

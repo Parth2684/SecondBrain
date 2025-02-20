@@ -30,11 +30,13 @@ export const AddBrain = () => {
                     }
     }
     return <div className="flex min-w-screen justify-center">
-        <div className="w-[50%] ">
+        <div className="w-[50%]">
             <InputBox type="text" label="Title" placeholder="Enter title here" onChange={(e) => setTitle(e.target.value)} />
             <InputBox type="text" label="Description" placeholder="Enter description here" onChange={(e) => setDescription(e.target.value)} />
             {error && <p className="text-red-600">{error}</p>}
+            <div className="mt-2 justify-self-center">
             <Button label="Save" onClick={handleSubmit} />
+            </div>
         </div>
     </div>
      

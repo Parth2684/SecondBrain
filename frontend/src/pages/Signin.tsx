@@ -29,9 +29,9 @@ export const Signin = () => {
     }
 
     return <div>
-        <Topbar isSigned={true}/>
+        <Topbar isSigned={false}/>
             <div className="max-w-screen flex justify-center ">
-                <div className="flex flex-col h-screen justify-center w-[35%]">
+                <div className="flex flex-col h-screen justify-self-center w-[35%]">
                     <Heading title="Sign in" />
                     <InputBox type="email" placeholder="Enter your email here" label="Email" onChange={(e => setEmail(e.target.value))} />
                     <InputBox type="password" placeholder="Enter your password here" label="Password" onChange={(e => setPassword(e.target.value))} />

@@ -21,7 +21,7 @@ export const Topbar = ({isSigned}: {isSigned: boolean}) => {
         
                     </div>
             
-        </div>
+                </div>
             
             </div>
         
