@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { Brain } from "../models/db";
 
 interface PutBrainHandlerInputs {
-    title: string;
+    title?: string;
     description?: string;
 }
 export const putBrainHandler = async (req: Request, res: Response) => {

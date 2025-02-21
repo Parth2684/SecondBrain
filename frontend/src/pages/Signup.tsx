@@ -2,7 +2,7 @@ import { MouseEvent, useState } from "react"
 import { InputBox } from "../components/InputBox"
 import { Button } from "../components/Button"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Heading } from "../components/Heading"
 import { Topbar } from "../components/Topbar"
 
@@ -45,6 +45,9 @@ export const Signup = () => {
             <div className="max-w-screen flex justify-center min-h-screen">
         <div className="flex flex-col h-screen w-[35%]">
             <Heading title="Signup" />
+            <div className="min-w-screen justify-end opacity-95 text-sm text-green-600">
+                <Link to={"/signin"} >Already have an account? Signin</Link>
+            </div>
             <InputBox type="text" placeholder="Enter your first name here" label="First Name" onChange={(e => setFirstName(e.target.value))} />
             <InputBox type="text" placeholder="Enter your last name here" label="Last Name" onChange={(e => setLastName(e.target.value))} />
             <InputBox type="email" placeholder="Enter your email here" label="Email" onChange={(e => setEmail(e.target.value))} />
@@ -55,6 +58,7 @@ export const Signup = () => {
             <div className="self-center mt-2">
                 <Button label="Submit" onClick={handleSubmit}/>
             </div>    
+            
         </div>
         
     </div>
